@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    const heading = "flex flex-col align-center w-max";
+    const h1 = "text-7xl";
+    const logos = "max-h-16 inline text-center";
+    return (
+      <div>
+        <div className="heading">
+          <h1 className={h1}>MarkDown Previewer</h1>
+          <p>
+            Utilizing
+            <img src={logo} alt="React Logo" width="60px" className={logos} />
+          </p>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
