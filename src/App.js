@@ -7,7 +7,7 @@ import "./App.css";
 import Editor from "./Components/editor.js";
 
 const styles = {
-  base: "",
+  base: "flex flex-col",
   //Heading Section
   headingSection: "flex flex-col items-center bg-gray-300 w-screen",
   h1: "text-5xl sm:text-7xl text-center mt-5",
