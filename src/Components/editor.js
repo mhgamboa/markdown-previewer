@@ -2,9 +2,9 @@ import React from "react";
 
 const styles = {
   editorContainer:
-    "flex flex-col items-center border-4 border-solid m-4 rounded p-2",
-  heading: "text-2xl font-medium",
-  userInputArea: "border-2 rounded border-gray-700 w-full",
+    "flex flex-col items-center my-1 w-full p-4 md:mb-5 md:w-5/12 md:mr-2 lg:p-3 md:rounded md:border-4 md:border-solid",
+  heading: "text-2xl font-medium mb-3",
+  userInputArea: "border-2 rounded border-gray-700 w-full h-full m-2",
 };
 
 class Editor extends React.Component {
@@ -17,7 +17,9 @@ class Editor extends React.Component {
           id="editor"
           cols="30"
           rows="10"
-        ></textarea>
+          id="editor"
+          style={{ resize: "none" }}
+        />
       </div>
     );
   }

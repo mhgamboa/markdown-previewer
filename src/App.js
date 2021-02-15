@@ -5,16 +5,20 @@ import tailwindLogo from "./images/tailwind.svg";
 import "./App.css";
 
 import Editor from "./Components/editor.js";
+import Previewer from "./Components/previewer.js";
 
 const styles = {
-  base: "flex flex-col",
+  base: "flex flex-col items-center h-screen",
   //Heading Section
-  headingSection: "flex flex-col items-center bg-gray-300 w-screen",
+  headingSection:
+    "flex flex-col bg-gray-100 items-center box-border w-full mb-3",
   h1: "text-5xl sm:text-7xl text-center mt-5",
   //Subheading
   subHeading: "mt-8 font-medium",
   logos: "max-h-16 inline text-center",
   tailwind: "ml-2",
+  //flexContaier
+  flexContainer: "flex flex-wrap w-full justify-center h-full",
 };
 
 class App extends React.Component {
@@ -45,7 +49,10 @@ class App extends React.Component {
             />
           </p>
         </div>
-        <Editor />
+        <div className={styles.flexContainer}>
+          <Editor />
+          <Previewer />
+        </div>
       </div>
     );
   }
