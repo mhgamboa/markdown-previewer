@@ -10,11 +10,10 @@ const styles = {
 
 class Previewer extends React.Component {
   render() {
-    console.log(this.props.userInput);
     return (
       <div className={styles.previewerContainer}>
         <h3 className={styles.heading}>Previewer</h3>
-        <p>{this.props.userInput}</p>
+        <p id="preview">{this.props.userInput}</p>
       </div>
     );
   }

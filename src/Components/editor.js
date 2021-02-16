@@ -1,4 +1,6 @@
 import React from "react";
+import { bindActionCreators } from "redux";
+import { connect } from "react-redux";
 
 const styles = {
   editorContainer:
@@ -13,16 +15,30 @@ class Editor extends React.Component {
       <div className={styles.editorContainer}>
         <h3 className={styles.heading}>Text Editor</h3>
         <textarea
+          value={this.props.userText}
           className={styles.userInputArea}
           id="editor"
           cols="30"
           rows="10"
           id="editor"
           style={{ resize: "none" }}
+          onChange={() =>
+            this.props.userInputAction(document.querySelector("#editor").value)
+          }
         />
       </div>
     );
   }
 }
 
-export default Editor;
+const userInputAction = (userText) => ({
+  type: "USERINPUT",
+  userText,
+});
+
+const mapDispatchToProps = (dispatch) =>
+  bindActionCreators({ userInputAction }, dispatch);
+
+const mapStateToProps = (state) => ({ userText: state.userInputReducer });
+
+export default connect(mapStateToProps, mapDispatchToProps)(Editor);

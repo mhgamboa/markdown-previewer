@@ -4,7 +4,7 @@ const initialState = "SUP";
 const userInputReducer = (state = initialState, action) => {
   switch (action.type) {
     case USERINPUT:
-      return action.userInput;
+      return action.userText;
     default:
       return state;
   }
