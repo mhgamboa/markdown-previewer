@@ -18,13 +18,13 @@ const styles = {
   logos: "max-h-16 inline text-center",
   tailwind: "ml-2",
   //flexContaier
-  flexContainer: "flex flex-wrap w-full justify-center h-full",
+  flexContainer: "dark flex flex-wrap w-full justify-center h-full",
 };
 
 class App extends React.Component {
   render() {
     return (
-      <div className={styles.base}>
+      <div className={`${styles.base}`}>
         <div className={styles.headingSection}>
           <h1 className={styles.h1}>MarkDown Previewer</h1>
           <p className={styles.subHeading}>

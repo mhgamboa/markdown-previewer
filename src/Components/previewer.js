@@ -1,5 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
+import marked from "marked";
+import { MarkdownPreview } from "react-marked-markdown";
+import ReactMarkDown from "react-markdown";
+import markdown from "markdown";
 
 const styles = {
   previewerContainer:
@@ -13,7 +17,7 @@ class Previewer extends React.Component {
     return (
       <div className={styles.previewerContainer}>
         <h3 className={styles.heading}>Previewer</h3>
-        <p id="preview">{this.props.userInput}</p>
+        <MarkdownPreview value={this.props.userInput} />
       </div>
     );
   }

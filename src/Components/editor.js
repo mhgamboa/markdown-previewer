@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 const styles = {
   editorContainer:
-    "flex flex-col items-center my-1 w-full p-4 md:mb-5 md:w-5/12 md:mr-2 lg:p-3 md:rounded md:border-4 md:border-solid",
+    "darK:bg-black flex flex-col items-center my-1 w-full p-4 md:mb-5 md:w-5/12 md:mr-2 lg:p-3 md:rounded md:border-4 md:border-solid",
   heading: "text-2xl font-medium mb-3",
   userInputArea: "border-2 rounded border-gray-700 w-full h-full m-2",
 };
