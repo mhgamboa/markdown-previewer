@@ -2,7 +2,7 @@ import React from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-const styles = {
+const editorStyles = {
   editorContainer:
     "darK:bg-black flex flex-col items-center my-1 w-full p-4 md:mb-5 md:w-5/12 md:mr-2 lg:p-3 md:rounded md:border-4 md:border-solid",
   heading: "text-2xl font-medium mb-3",
@@ -12,11 +12,11 @@ const styles = {
 class Editor extends React.Component {
   render() {
     return (
-      <div className={styles.editorContainer}>
-        <h3 className={styles.heading}>Text Editor</h3>
+      <div className={editorStyles.editorContainer}>
+        <h3 className={editorStyles.heading}>Text Editor</h3>
         <textarea
           value={this.props.userText}
-          className={styles.userInputArea}
+          className={editorStyles.userInputArea}
           id="editor"
           cols="30"
           rows="10"

@@ -7,7 +7,7 @@ import "./App.css";
 import Editor from "./Components/editor.js";
 import Previewer from "./Components/previewer.js";
 
-const styles = {
+const appStyles = {
   base: "flex flex-col items-center h-screen",
   //Heading Section
   headingSection:
@@ -24,32 +24,32 @@ const styles = {
 class App extends React.Component {
   render() {
     return (
-      <div className={`${styles.base}`}>
-        <div className={styles.headingSection}>
-          <h1 className={styles.h1}>MarkDown Previewer</h1>
-          <p className={styles.subHeading}>
+      <div className={`${appStyles.base}`}>
+        <div className={appStyles.headingSection}>
+          <h1 className={appStyles.h1}>MarkDown Previewer</h1>
+          <p className={appStyles.subHeading}>
             Utilizing:
             <img
               src={reactLogo}
               alt="React Logo"
               width="50px"
-              className={styles.logos}
+              className={appStyles.logos}
             />
             <img
               src={reduxLogo}
               alt="Redux Logo"
               width="30px"
-              className={styles.logos}
+              className={appStyles.logos}
             />
             <img
               src={tailwindLogo}
               alt="Tailwind CSS Logo"
               width="30px"
-              className={`${styles.logos} ${styles.tailwind}`}
+              className={`${appStyles.logos} ${appStyles.tailwind}`}
             />
           </p>
         </div>
-        <div className={styles.flexContainer}>
+        <div className={appStyles.flexContainer}>
           <Editor />
           <Previewer />
         </div>

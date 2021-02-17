@@ -1,11 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import marked from "marked";
-import { MarkdownPreview } from "react-marked-markdown";
 import ReactMarkDown from "react-markdown";
-import markdown from "markdown";
 
-const styles = {
+const previewerStyles = {
   previewerContainer:
     "flex flex-col items-center my-1 w-full p-4 md:mb-5 md:w-6/12 md:ml-2 md:rounded md:border-4 md:border-solid",
   heading: "text-2xl font-medium mb-3",
@@ -15,9 +12,9 @@ const styles = {
 class Previewer extends React.Component {
   render() {
     return (
-      <div className={styles.previewerContainer}>
-        <h3 className={styles.heading}>Previewer</h3>
-        <MarkdownPreview value={this.props.userInput} />
+      <div className={previewerStyles.previewerContainer}>
+        <h3 className={previewerStyles.heading}>Previewer</h3>
+        <ReactMarkDown>{this.props.userInput}</ReactMarkDown>
       </div>
     );
   }
